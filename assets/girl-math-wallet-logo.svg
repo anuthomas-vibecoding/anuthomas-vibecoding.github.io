@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Girl Math Wallet logo</title>
+  <desc id="desc">A pink wallet with coins, sparkles, and an upward investment chart.</desc>
+  <defs>
+    <linearGradient id="bg" x1="70" y1="40" x2="448" y2="476" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff3c6"/>
+      <stop offset=".45" stop-color="#ff98bd"/>
+      <stop offset="1" stop-color="#58c7a2"/>
+    </linearGradient>
+    <linearGradient id="wallet" x1="129" y1="170" x2="392" y2="392" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ff9abf"/>
+      <stop offset=".52" stop-color="#f05c9d"/>
+      <stop offset="1" stop-color="#d74483"/>
+    </linearGradient>
+    <linearGradient id="mint" x1="265" y1="110" x2="414" y2="261" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#c7ffe8"/>
+      <stop offset="1" stop-color="#58c7a2"/>
+    </linearGradient>
+    <linearGradient id="coin" x1="212" y1="94" x2="333" y2="222" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff5a3"/>
+      <stop offset=".48" stop-color="#ffd86f"/>
+      <stop offset="1" stop-color="#f0a933"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="#732f4c" flood-opacity=".22"/>
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" rx="116" fill="url(#bg)"/>
+  <circle cx="147" cy="149" r="11" fill="#f05c9d" opacity=".8"/>
+  <circle cx="413" cy="184" r="22" fill="#ef528e" opacity=".82"/>
+  <circle cx="402" cy="270" r="8" fill="#fff2ad" opacity=".9"/>
+  <circle cx="113" cy="263" r="9" fill="#58c7a2" opacity=".78"/>
+
+  <g filter="url(#shadow)">
+    <path d="M270 128c31-32 86-27 112 11l25 36-112 75-83-69 58-53Z" fill="url(#mint)"/>
+    <path d="M295 151c22-18 55-14 71 10l13 19-78 51-56-46 50-34Z" fill="none" stroke="#f7fff9" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <circle cx="258" cy="159" r="60" fill="url(#coin)"/>
+    <circle cx="258" cy="159" r="43" fill="none" stroke="#fff7be" stroke-width="10"/>
+    <path d="M232 153c0-17 22-25 34-10 12-15 34-7 34 10 0 22-34 43-34 43s-34-21-34-43Z" fill="#f05c9d"/>
+
+    <path d="M110 209c0-30 24-54 54-54h200c31 0 56 25 56 56v40h-74c-25 0-45 20-45 45s20 45 45 45h74v22c0 32-26 58-58 58H156c-25 0-46-20-46-46V209Z" fill="url(#wallet)"/>
+    <path d="M126 227c0-28 22-50 50-50h180" fill="none" stroke="#ffc1d7" stroke-width="12" stroke-linecap="round"/>
+    <path d="M128 348c36 18 206 24 278-8" fill="none" stroke="#bf3375" stroke-width="7" stroke-linecap="round" opacity=".38"/>
+
+    <path d="M317 254h91c22 0 40 18 40 40v7c0 22-18 40-40 40h-91c-17 0-31-14-31-31v-25c0-17 14-31 31-31Z" fill="#e7508f"/>
+    <circle cx="375" cy="298" r="27" fill="url(#coin)"/>
+    <path d="M363 294c0-8 10-12 16-5 6-7 16-3 16 5 0 11-16 21-16 21s-16-10-16-21Z" fill="#c7477d"/>
+
+    <path d="M169 338h34v39h-34z" fill="#ffd86f" rx="9"/>
+    <path d="M222 302h34v75h-34z" fill="#58c7a2" rx="9"/>
+    <path d="M274 262h34v115h-34z" fill="#fff3a1" rx="9"/>
+    <path d="M162 311c41-15 72-44 95-29 20 13 43 4 79-48" fill="none" stroke="#fff9bb" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M334 234l3 47-43-18" fill="none" stroke="#fff9bb" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <path d="M129 170l11 25 25 11-25 11-11 25-11-25-25-11 25-11 11-25Z" fill="#fff7b6"/>
+  <path d="M174 112l8 17 17 8-17 8-8 17-8-17-17-8 17-8 8-17Z" fill="#fff7b6"/>
+  <path d="M402 114l7 16 16 7-16 7-7 16-7-16-16-7 16-7 7-16Z" fill="#fff7b6"/>
+</svg>
