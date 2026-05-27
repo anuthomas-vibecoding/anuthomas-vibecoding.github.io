@@ -1,0 +1,359 @@
+:root {
+  color-scheme: light;
+  --ink: #211821;
+  --muted: #695c66;
+  --rose: #f05c9d;
+  --coral: #ff8066;
+  --mint: #58c7a2;
+  --butter: #ffd86f;
+  --paper: #fffaf5;
+  --shell: #fff1f5;
+  --line: rgba(33, 24, 33, 0.12);
+  --shadow: 0 22px 55px rgba(115, 47, 76, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    linear-gradient(180deg, rgba(255, 250, 245, 0.92), rgba(255, 244, 249, 0.96)),
+    url("assets/girl-math-wallet-logo.svg") center 78px / min(62vw, 720px) no-repeat fixed;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 68px;
+  padding: 14px clamp(18px, 5vw, 64px);
+  background: rgba(255, 250, 245, 0.78);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(18px);
+}
+
+.brand,
+nav,
+.hero-actions {
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  gap: 10px;
+  font-weight: 800;
+}
+
+.brand img {
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(240, 92, 157, 0.22);
+}
+
+nav {
+  gap: clamp(12px, 3vw, 28px);
+  color: var(--muted);
+  font-size: 0.94rem;
+  font-weight: 700;
+}
+
+nav a:hover {
+  color: var(--ink);
+}
+
+.hero {
+  position: relative;
+  min-height: calc(100svh - 68px);
+  display: grid;
+  align-items: center;
+  padding: clamp(42px, 8vw, 92px) clamp(22px, 7vw, 86px) 84px;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 112px;
+  background: linear-gradient(180deg, rgba(255, 250, 245, 0), var(--paper));
+  pointer-events: none;
+}
+
+.hero-art {
+  position: absolute;
+  right: clamp(10px, 7vw, 96px);
+  top: 50%;
+  width: min(42vw, 430px);
+  max-width: 430px;
+  border-radius: 30%;
+  box-shadow: var(--shadow);
+  transform: translateY(-45%) rotate(5deg);
+  opacity: 0.96;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #a13d70;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 18px;
+  font-size: clamp(4rem, 11vw, 9.25rem);
+  line-height: 0.88;
+  letter-spacing: 0;
+}
+
+h2 {
+  margin-bottom: 12px;
+  font-size: clamp(2rem, 5vw, 4.6rem);
+  line-height: 0.96;
+  letter-spacing: 0;
+}
+
+h3 {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.lede {
+  max-width: 590px;
+  color: var(--muted);
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  line-height: 1.45;
+}
+
+.hero-actions {
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 18px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  font-weight: 850;
+  box-shadow: 0 10px 26px rgba(115, 47, 76, 0.1);
+}
+
+.button.primary {
+  color: white;
+  background: var(--ink);
+}
+
+.button.secondary {
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.ticker {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border-block: 1px solid var(--line);
+}
+
+.ticker span {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 18px;
+  text-align: center;
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.section {
+  padding: clamp(56px, 9vw, 104px) clamp(22px, 7vw, 86px);
+  background: var(--paper);
+}
+
+.section-heading {
+  max-width: 820px;
+  margin-bottom: 28px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.feature {
+  min-height: 230px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: 0 14px 34px rgba(115, 47, 76, 0.08);
+}
+
+.feature p {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.icon {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  border-radius: 50%;
+  color: var(--ink);
+  background: linear-gradient(135deg, var(--butter), var(--mint));
+  font-weight: 950;
+}
+
+.dreams {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+  gap: 28px;
+  align-items: center;
+  background:
+    linear-gradient(135deg, rgba(255, 216, 111, 0.22), rgba(88, 199, 162, 0.18)),
+    var(--shell);
+}
+
+.goal-list {
+  display: grid;
+  gap: 12px;
+}
+
+.goal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 62px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 12px 28px rgba(115, 47, 76, 0.08);
+}
+
+.goal span {
+  font-weight: 800;
+}
+
+.goal strong {
+  color: #bd2f78;
+  font-size: 1.35rem;
+}
+
+.waitlist {
+  min-height: 54svh;
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  background: var(--ink);
+  color: white;
+}
+
+.waitlist .eyebrow,
+.waitlist p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.waitlist p {
+  max-width: 650px;
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.waitlist .button.primary {
+  color: var(--ink);
+  background: var(--butter);
+}
+
+@media (max-width: 820px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero {
+    min-height: 780px;
+    align-items: end;
+    padding-top: 46px;
+  }
+
+  .hero-art {
+    top: 70px;
+    right: 50%;
+    width: min(72vw, 360px);
+    transform: translateX(50%) rotate(4deg);
+  }
+
+  .hero-copy {
+    padding-top: 320px;
+  }
+
+  h1 {
+    font-size: clamp(3.4rem, 18vw, 5.4rem);
+  }
+
+  .ticker,
+  .feature-grid,
+  .dreams {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  nav {
+    width: 100%;
+    justify-content: space-between;
+    font-size: 0.86rem;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
+}
