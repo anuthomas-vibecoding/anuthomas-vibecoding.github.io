@@ -77,6 +77,10 @@ nav a:hover {
   color: var(--ink);
 }
 
+nav a[aria-current="page"] {
+  color: var(--ink);
+}
+
 .hero {
   position: relative;
   min-height: calc(100svh - 68px);
@@ -307,6 +311,87 @@ h3 {
   background: var(--butter);
 }
 
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 22px;
+  padding: 22px clamp(18px, 5vw, 64px);
+  color: var(--muted);
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.site-footer span {
+  margin-right: auto;
+}
+
+.site-footer a:hover {
+  color: var(--ink);
+}
+
+.legal-page {
+  min-height: 100svh;
+  padding: clamp(38px, 7vw, 80px) clamp(18px, 6vw, 84px);
+  background:
+    linear-gradient(180deg, rgba(255, 250, 245, 0.96), rgba(255, 244, 249, 0.98)),
+    url("assets/girl-math-wallet-logo.svg") right 4vw top 80px / min(42vw, 520px) no-repeat fixed;
+}
+
+.legal-hero {
+  max-width: 900px;
+  margin-bottom: 24px;
+}
+
+.legal-hero h1 {
+  margin-bottom: 12px;
+  font-size: clamp(3rem, 8vw, 6.8rem);
+  line-height: 0.94;
+}
+
+.legal-hero p:last-child {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.legal-card {
+  max-width: 960px;
+  padding: clamp(22px, 4vw, 44px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 16px 42px rgba(115, 47, 76, 0.1);
+  backdrop-filter: blur(14px);
+}
+
+.legal-card h2 {
+  margin: 34px 0 10px;
+  font-size: clamp(1.35rem, 2.4vw, 2rem);
+  line-height: 1.08;
+}
+
+.legal-card h2:first-of-type {
+  margin-top: 24px;
+}
+
+.legal-card p,
+.legal-card li {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.68;
+}
+
+.legal-card ul {
+  padding-left: 22px;
+}
+
+.legal-card a {
+  color: #bd2f78;
+  font-weight: 850;
+}
+
 @media (max-width: 820px) {
   .site-header {
     align-items: flex-start;
@@ -345,7 +430,8 @@ h3 {
 @media (max-width: 520px) {
   nav {
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     font-size: 0.86rem;
   }
 
